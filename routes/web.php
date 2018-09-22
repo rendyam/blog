@@ -30,10 +30,10 @@ Route::get('/blog', 'PostController@index');
 // Route::get('/post/create', 'PostController@create');
 // Route::post('/post/store', 'PostController@store');
 
-// Route::get('/post/{id}',['as' => 'post.detail', function($id) {
-//     echo "Post $id";
-//     echo "</br>";
-//     echo "Body post in ID $id";
-// }]);
+//  Route::get('/post/{id}',['as' => 'post.detail', function($id) {
+//      echo "Post $id";
+//      echo "</br>";
+//      echo "Body post in ID $id";
+//  }]);
 
 Route::resource('post', 'PostController');

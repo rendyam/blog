@@ -13,7 +13,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts =[
+            ['id'=>'1', 'title'=>'Post Title 1', 'body'=>'Post Body 1'],
+            ['id'=>'2', 'title'=>'Post Title 2', 'body'=>'Post Body 2'],
+            ['id'=>'3', 'title'=>'Post Title 3', 'body'=>'Post Body 3'],
+            ['id'=>'4', 'title'=>'Post Title 4', 'body'=>'Post Body 4'],
+            ['id'=>'5', 'title'=>'Post Title 5', 'body'=>'Post Body 5']
+        ];
+        return view('index', compact('posts'));
     }
 
     /**
@@ -23,7 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -34,7 +41,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return dd($request->all());
     }
 
     /**
@@ -45,7 +52,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        return 'Ini halaman show dengan id: '. $id;
     }
 
     /**
@@ -56,7 +63,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        return 'Halaman edit data dengan ID ' .$id;
     }
 
     /**
