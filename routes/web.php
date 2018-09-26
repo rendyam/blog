@@ -37,3 +37,20 @@ Route::get('/blog', 'PostController@index');
 //  }]);
 
 Route::resource('post', 'PostController');
+
+Route::get('/insert', function(){
+    //DB::insert('insert into posts(title, body, user_id) values(?,?,?)', ['Belajar PHP dengan Laravel', 'Laravel Best Framework','1']);
+    $data = [
+        'title' => 'Disini isian Title',
+        'body' => 'Isian Body untuk table Posts',
+        'user_id' => 2
+    ];
+    DB::table('posts')->insert($data);
+    echo "Data berhasil diinput!";
+});
+
+Route::get('/read', function(){
+    //$query = DB::select('select * from posts where id = ?', [1]);
+    $query = DB::table('posts')->where('id', 1)->first();
+    return var_dump($query);
+});
