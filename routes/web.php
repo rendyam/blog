@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 use App\Post;
+=======
+
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,16 +15,33 @@ use App\Post;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return redirect('/about');
 });
 
 Route::get('/about', function(){
     return 'Ini page about';
+=======
+Route::get('/', function(){
+    //return view('welcome');
+    //return 'Hello, World!';
+    //$a = 1;
+    //$b = 2;
+    //$c = $a + $b;
+    //return $c;
+    return redirect('/about');
+});
+
+
+Route::get('/about', function(){
+    return 'Hi, this is about page';
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
 });
 
 Route::get('/blog', 'PostController@index');
 // Route::get('/post/create', 'PostController@create');
+<<<<<<< HEAD
 // Route::post('/post/store/', 'PostController@store');
 
 // Route::get('/post/{id}', ['as'=>'post.detail', function($id){
@@ -41,12 +62,34 @@ Route::get('/insert', function(){
     ];
     DB::table('posts')->insert($data);
     echo "Data berhasil ditambahkan!!!";
+=======
+// Route::post('/post/store', 'PostController@store');
+
+//  Route::get('/post/{id}',['as' => 'post.detail', function($id) {
+//      echo "Post $id";
+//      echo "</br>";
+//      echo "Body post in ID $id";
+//  }]);
+
+Route::resource('post', 'PostController');
+
+Route::get('/insert', function(){
+    //DB::insert('insert into posts(title, body, user_id) values(?,?,?)', ['Belajar PHP dengan Laravel', 'Laravel Best Framework','1']);
+    $data = [
+        'title' => 'Disini isian Title',
+        'body' => 'Isian Body untuk table Posts',
+        'user_id' => 2
+    ];
+    DB::table('posts')->insert($data);
+    echo "Data berhasil diinput!";
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
 });
 
 Route::get('/read', function(){
     //$query = DB::select('select * from posts where id = ?', [1]);
     $query = DB::table('posts')->where('id', 1)->first();
     return var_dump($query);
+<<<<<<< HEAD
 });
 
 Route::get('/update', function(){
@@ -158,4 +201,6 @@ Route::get('/admin', function(){
 
 Route::get('/member', function(){
     return "Halaman Member!";
+=======
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
 });

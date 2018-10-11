@@ -13,6 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $posts = [
             ['id' => '1', 'title' => 'Post Title 1', 'body' => 'Post Body 1'],
             ['id' => '2', 'title' => 'Post Title 2', 'body' => 'Post Body 2'],
@@ -21,6 +22,16 @@ class PostController extends Controller
         ];
 
         return view ('index', compact('posts'));
+=======
+        $posts =[
+            ['id'=>'1', 'title'=>'Post Title 1', 'body'=>'Post Body 1'],
+            ['id'=>'2', 'title'=>'Post Title 2', 'body'=>'Post Body 2'],
+            ['id'=>'3', 'title'=>'Post Title 3', 'body'=>'Post Body 3'],
+            ['id'=>'4', 'title'=>'Post Title 4', 'body'=>'Post Body 4'],
+            ['id'=>'5', 'title'=>'Post Title 5', 'body'=>'Post Body 5']
+        ];
+        return view('index', compact('posts'));
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
     }
 
     /**
@@ -30,7 +41,10 @@ class PostController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
         //
+=======
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
         return view('create');
     }
 
@@ -42,7 +56,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         //
+=======
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
         return dd($request->all());
     }
 
@@ -54,8 +71,12 @@ class PostController extends Controller
      */
     public function show($id)
     {
+<<<<<<< HEAD
         //
         return "Ini adalah halaman show dengan ID: " . $id;
+=======
+        return 'Ini halaman show dengan id: '. $id;
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
     }
 
     /**
@@ -66,7 +87,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+<<<<<<< HEAD
         //
+=======
+        return 'Halaman edit data dengan ID ' .$id;
+>>>>>>> 378ff517e5acd8512358a9f2fbb30aea6cde5e5a
     }
 
     /**
